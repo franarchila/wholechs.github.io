@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="container default">
+  <h2 class="editable trafalgar text-center" style="margin-top: 50px;">{{ page.title }}</h2>
+  <div blog-gallery="many">
+    <h2 class="trafalgar text-center" style="margin-top: 50px;">{{ page.tag | capitalize }}</h2>
+    <ul style="margin: 50px 20px 200px 20px;">
+      {% assign posts = site.tags[page.tag] %}
+        {% for post in posts %}
+        <a href="{{ post.url }}" class="hvr-grow"><li class="{{ post.theme }} invert">
+        <div class="preview" style="background-position: center {{ post.image-position }}; background-image: url('{{ post.main_image_path }}')">
+        </div>
+          <h4 class="pica">{{ post.title }}</h4>
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </li>
+        </a>
+        {% endfor %}
+    </ul>
+  </div>
+</div>

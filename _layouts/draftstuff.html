@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="page-wrap">
+    <aside class="main-sidebar" role="complementary">
+      <center>
+        <div class="feature-image {{ page.theme }}" style="background-image: url('{{ page.main_image_path }}'); background-position: {{ page.image-position }} center">
+
+        </div>
+
+        <div tags>
+          <!-- <h3 class="great-primer">Tags</h3> -->
+            {% for tag in site.tags %}
+
+            {% case site.tags %}
+            {% when 'Food' %}
+            <span class="iconz iconz-cutlery"></span>
+            {% when 'Recipe' %}
+            <span class="iconz iconz-clipboard"></span>
+            {% when 'Fitness' %}
+            <span class="iconz iconz-lifting"></span>
+            {% when 'Whole30' %}
+            <span class="iconz iconz-lifting"></span>
+            {% else %}
+            <span class="iconz iconz-blog"></span>
+            {% endcase %}
+            <span class="minion">{{ tag[0] }}</span>
+
+            {% endfor %}
+        </div>
+        <div class="social-media">
+        </div>
+      </center>
+    </aside>
+    <section class="main-content" role="main">
+      <div class="default">
+        <h2 class="double-pica headline">{{ page.title }}</h2>
+        <h4 class="pica date">{{ page.date | date: '%B %d, %Y' }}</h4>
+        {{ content }}
+      </div>
+    </section>
+  </div>
+</div>
