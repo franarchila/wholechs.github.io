@@ -1,0 +1,45 @@
+
+.row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+@media all and (min-width:$breakpoint-tablet){
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@media all and (max-width:$breakpoint-tablet){
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media all and (max-width:807px) and (min-width:$breakpoint-tablet){
+  flex-wrap: wrap;
+}
+}
+
+.column {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row-padding {
+  @media all and (min-width:$breakpoint-tablet){
+      padding: 50px 20px 50px 20px;
+  }
+}

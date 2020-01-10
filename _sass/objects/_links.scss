@@ -1,0 +1,73 @@
+a.social {
+  // color: $contentcolor-lite;
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 10px;
+}
+a.social:hover {
+  // color: #38baf9;
+}
+
+a {
+  text-decoration: none;
+  color: $primarycolor;
+}
+a.generic {
+  font-family: $secondary-font;
+  letter-spacing:1px;
+}
+a.default {
+  color: $primarycolor;
+}
+a.footer-invert {
+  color: $contentcolor-lite;
+  font-family: $body-font;
+  font-size: 1rem;
+  margin-top:20px;
+}
+a.neutral {
+  color: $neutral;
+}
+a.home {
+  color: $primarycolor;
+}
+a.home:hover {
+  color: $primarycolor;
+}
+
+a:hover {
+  color: $default;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all 5s ease-out;
+}
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: $primarycolor;
+  height: 1px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}

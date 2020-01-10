@@ -1,0 +1,15 @@
+@media all and (min-width: $breakpoint-tablet) {
+  .center-image
+  {
+      margin: 0 auto;
+      display: block;
+  }
+}
+@media all and (max-width: $breakpoint-tablet) {
+  .center-image
+  {
+    max-width: 300px;
+      margin: 0 auto;
+      display: block;
+  }
+}

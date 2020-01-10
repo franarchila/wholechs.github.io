@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+.container {
+  @media all and (min-width:$breakpoint-laptop-large) {
+    padding: 65px 200px 65px 200px;
+  }
+  @media all and (max-width:$breakpoint-laptop-large) and (min-width:$breakpoint-laptop) {
+    padding: 60px;
+  }
+  @media all and (max-width:$breakpoint-laptop)  and (min-width:$breakpoint-tablet) {
+    padding: 50px;
+  }
+  @media all  and (max-width:$breakpoint-tablet) {
+    padding: 30px 10px 30px 10px;
+  }
+}
+
+
+// padding
+.breathe {
+  @media all  and (min-width:$breakpoint-laptop) {
+    padding: 30px 20px 30px 20px;
+  }
+  @media all  and (max-width:$breakpoint-laptop) {
+    padding: 15px;
+  }
+}
+
+.headline {
+  margin: 20px 0 20px 0;
+}
+
+.date {
+  margin: 20px 0 20px 0;
+}

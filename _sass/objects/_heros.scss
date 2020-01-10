@@ -1,0 +1,39 @@
+.hero {
+  background-repeat: no-repeat;
+  @media all and (min-width:$breakpoint-tablet) {
+      background-size: cover;
+  }
+  @media all and (min-width:$breakpoint-laptop-large) {
+    padding: 250px 300px 200px 300px;
+  }
+  @media all and (min-width:$breakpoint-laptop) and (max-width:$breakpoint-laptop-large) {
+    padding: 250px 200px 200px 200px;
+  }
+  @media all and (min-width:$breakpoint-tablet) and (max-width:$breakpoint-laptop) {
+    padding: 200px 100px 150px 100px;
+  }
+  @media all and (min-width:$breakpoint-mobile-large) and (max-width:$breakpoint-tablet) {
+    padding: 170px 50px 100px 50px;
+    background-size: 150% auto;
+  }
+  @media all and (min-width:$breakpoint-mobile-medium) and (max-width:$breakpoint-mobile-large){
+    padding: 80px 50px 22px 50px;
+    background-size: 120% auto;
+  }
+  @media all and (max-width:$breakpoint-mobile-medium) {
+    padding: 100px 10px 30px 10px;
+    background-size: auto 100%;
+  }
+}
+
+.hero-content {
+    color: $contentcolor-lite;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title {
+  margin: 10px 0 10px 0;
+}
+.hero-subtitle {
+  margin: 20px 0 10px 0;
+}

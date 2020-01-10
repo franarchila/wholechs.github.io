@@ -1,0 +1,159 @@
+
+.main_nav {
+  position: fixed;
+  color: $contentcolor-dark;
+  width: 100%;
+  z-index: 1000;
+  height: 65px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+  li {
+    a {
+    color: $contentcolor-dark;
+  }
+  }
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: right; }
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    // font-weight: 200;
+}
+
+
+/* Change background color of links on hover */
+ul.topnav li a:hover, ul.topnav li a:focus {
+  color: $primarycolor;
+}
+
+ul.topnav li a.active {color: $primarycolor;
+}
+
+
+
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media all and (max-width:$breakpoint-tablet) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media all and (max-width:$breakpoint-tablet) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+.left-nav {
+  // background-color: $contentcolor-lite;
+  display: inline-block;
+  float: left;
+  // padding: 20px 15px 15px 0;
+  @media all and (min-width:$breakpoint-laptop-large) {
+    padding: 8px 15px 10px 200px;
+  }
+  @media all and (max-width:$breakpoint-laptop-large) and (min-width:$breakpoint-tablet) {
+    padding: 15px 15px 25px 20px;
+  }
+  @media all and (max-width:$breakpoint-tablet) and (min-width:$breakpoint-mobile-large){
+    padding: 15px 15px 15px 15px;
+  }
+  @media all and (max-width:$breakpoint-mobile-large) {
+  padding: 20px 15px 10px 15px;
+  }
+}
+
+.right-nav {
+  @media all and (min-width:$breakpoint-laptop-large) {
+    width: 90%;
+  }
+  @media all and (max-width:$breakpoint-laptop-large) {
+    width: 100%;
+  }
+}
+// end main nav
+#myTopnav {
+  list-style-type: none;
+}
+
+nav.post_navigation {
+  width: 100%;
+  padding: 30px 15px 30px 10px;
+  // text-align: left;
+  // display: inline block;
+  position: relative;
+  .left {
+    position: absolute;
+    left: 1px;
+  }
+  .right {
+    position: absolute;
+    right: 15px;
+  }
+  a {
+    font-family: $primary-font;
+    color: $primarycolor;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all 5s ease-out;
+  }
+  a:hover {
+    color: $default;
+  }
+  h5 {
+    margin: 0 0 10px 0;
+  }
+}
+nav.filters {
+  margin: 50px 20px 30px 20px;
+  a {
+    margin: 0 2px 0 2px;
+    font-weight: 300;
+    padding: 10px 7px 10px 7px;
+    font-family: $primary-font;
+    color: $contentcolor-lite;
+  }
+  a:focus {
+    background-color: $highlighter;
+  }
+}
+
+nav.food {
+  a {
+    background-color: $primarycolor;
+  }
+}
