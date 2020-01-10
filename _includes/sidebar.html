@@ -1,0 +1,52 @@
+<aside class="main-sidebar" role="complementary">
+  <center>
+    <div class="feature-image {{ page.theme }}" style="background-image: url('{{ page.main_image_path }}'); background-position: {{ page.image-position }} center">
+    </div>
+    <div class="{{ page.theme }} bookmark">
+      <h4 class="pica"><i class="fa fa-caret-right" aria-hidden="true"></i> {{ page.title }}</h4>
+    </div>
+    <div tags>
+        {% for tag in page.tags %}
+            <div tag>
+              <a href="{{ site.url }}/{{ site.tag_page_dir }}/{{ tag | slugify: 'pretty' }}/"><span class="brevier">{{ tag }}</span></a>
+            </div>
+        {% endfor %}
+    </div>
+    {% include share.html %}
+    <div class="related">
+      <h5 class="minion">Related Posts</h5>
+
+      {% assign maxRelated = 4 %}
+      {% assign minCommonTags =  2 %}
+      {% assign maxRelatedCounter = 0 %}
+
+        {% for post in site.posts %}
+
+          {% assign sameTagCount = 0 %}
+          {% assign commonTags = '' %}
+
+          {% for tag in post.tags %}
+            {% if post.url != page.url %}
+              {% if page.tags contains tag %}
+                {% assign sameTagCount = sameTagCount | plus: 1 %}
+                {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+                {% assign commonTags = commonTags | append: tagmarkup %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          {% if sameTagCount >= minCommonTags %}
+            <div>
+              <a href="{{ site.baseurl }}{{ post.url }}" class="post">{{ post.title }}</a>
+            </div>
+            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+            {% if maxRelatedCounter >= maxRelated %}
+              {% break %}
+            {% endif %}
+          {% endif %}
+
+        {% endfor %}
+
+      </div>
+  </center>
+</aside>

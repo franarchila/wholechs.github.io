@@ -1,0 +1,13 @@
+
+<nav class="post_navigation">
+  {% if page.previous.url %}
+  <div class="left">
+  <h5 class="minion">Previous:</h5>  <a href="{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+  </div>
+  {% endif %}
+  {% if page.next.url %}
+  <div class="right">
+    <h5 class="minion">Next:</h5><a href="{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+  </div>
+  {% endif %}
+</nav>

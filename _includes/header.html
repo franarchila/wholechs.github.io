@@ -1,0 +1,21 @@
+<header>
+  <div class="nav-container">
+    <!-- *ask cam how to add name or logo or something on left side* -->
+    <nav class="main_nav">
+      <div class="left-nav logo">
+        <a href="/" class="home"><span class="part1">Whole CHS</span><span class="part2"> Living</span></a>
+      </div>
+      <div class="right-nav">
+        <ul class="topnav" id="myTopnav">
+          <li class="icon">
+            <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+          </li>
+          <li class="pica"><a href="/contact/" {% if page.url=="/contact/" %} class="active" {% endif %}>Contact</a></li>
+          <li class="pica"><a href="/food/" {% if page.url=="/food-nutrition/" %} class="active" {% endif %}>Food</a></li>
+          <li class="pica"><a href="/fitness/" {% if page.url=="/fitness/" %} class="active" {% endif %}>Fitness</a></li>
+          <!-- <li class="pica"><a href="/about/" {% if page.url=="/about/" %} class="active" {% endif %}>Fran</a></li> -->
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
