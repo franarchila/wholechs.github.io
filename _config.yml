@@ -1,0 +1,48 @@
+---
+title: Whole CHS Living
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: fran.archila@gmail.com
+description: Finding a wholesome & healthy life in Charleston, SC.
+baseurl: ''
+url: http://www.wholechsliving.com/
+disqus_shortname: whole-chs-living
+twitter_username: jekyllrb
+github_username: Wholechsliving
+markdown: kramdown
+gems:
+- jekyll-feed
+- jekyll/tagging
+exclude:
+- Gemfile
+- Gemfile.lock
+_defaults:
+  image_path: "/images/placeholder.jpg"
+tag_page_layout: tag
+tag_page_dir: tags
+tag_permalink_style: pretty
+_options:
+  image_path:
+    width: 300
+    height: 300
+    resize_style: contain
+    mime_type: image/jpeg
+    expandable: true
+  content:
+    width: 300
+    height: 300
+    resize_style: cover
+    mime_type: image/png
+    center: center-image
+    justify: center-image
+  _block:
+    undo: true
+    redo: true
+    center: center-image
+    justify: center-image
